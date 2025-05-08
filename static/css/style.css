@@ -3654,7 +3654,7 @@ h4 {
 
 /* line 209, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_course.scss */
 .admission_area .admission_form .single_input input::placeholder, .admission_area .admission_form .single_input textarea::placeholder {
-    color: #fff;
+    color: #a0a3af;
     font-size: 14px;
     font-weight: 300;
 }
