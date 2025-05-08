@@ -244,32 +244,23 @@
         <div class="col-lg-7">
           <div class="admission_form">
             <h3>Направете запитване</h3>
-            <form action="#">
+            <form id="contactForm" method="post">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-md-6">
-                  <div class="single_input">
-                    <input type="text" placeholder="Име">
-                  </div>
+                  <div class="single_input">{{ form.first_name }}</div>
                 </div>
                 <div class="col-md-6">
-                  <div class="single_input">
-                    <input type="text" placeholder="Фамилия">
-                  </div>
+                  <div class="single_input">{{ form.last_name }}</div>
                 </div>
                 <div class="col-md-6">
-                  <div class="single_input">
-                    <input type="text" placeholder="Телефон за контакт:">
-                  </div>
+                  <div class="single_input">{{ form.phone }}</div>
                 </div>
                 <div class="col-md-6">
-                  <div class="single_input">
-                    <input type="text" placeholder="Email">
-                  </div>
+                  <div class="single_input">{{ form.email }}</div>
                 </div>
                 <div class="col-md-12">
-                  <div class="single_input">
-                    <textarea cols="30" placeholder="Оставете коментар:" rows="10"></textarea>
-                  </div>
+                  <div class="single_input">{{ form.message }}</div>
                 </div>
                 <div class="col-md-12">
                   <div class="apply_btn">
@@ -278,6 +269,9 @@
                 </div>
               </div>
             </form>
+
+            <div id="formMessage" style="margin-top: 10px; color: green;"></div>
+
           </div>
         </div>
       </div>
@@ -319,14 +313,14 @@
             <h4>Последвай ни</h4>
             <a href="https://facebook.com/hashtaghub" target="_blank">Facebook</a>
           </div>
-            <p>&copy; 2025 Hashtag Hub. Всички права запазени.</p>
+          <p>&copy; 2025 Hashtag Hub. Всички права запазени.</p>
         </div>
 
         <div class="map-frame">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d70332.10741933734!2d23.264966934980446!3d42.665271784839646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8459b400b571%3A0xb3d7ce23f023b130!2sHladilnika%2C%20ul.%20%22Stratsin%22%205%2C%201407%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2sua!4v1746701340449!5m2!1sen!2sua"
-            width="650" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d70332.10741933734!2d23.264966934980446!3d42.665271784839646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8459b400b571%3A0xb3d7ce23f023b130!2sHladilnika%2C%20ul.%20%22Stratsin%22%205%2C%201407%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2sua!4v1746701340449!5m2!1sen!2sua"
+              width="650" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
 
@@ -342,7 +336,6 @@
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
-<script src="{% static 'js/ajax-form.js' %}"></script>
 <script src="{% static 'js/waypoints.min.js' %}"></script>
 <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
 <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
@@ -355,13 +348,35 @@
 <script src="{% static 'js/plugins.js' %}"></script>
 <script src="{% static 'js/gijgo.min.js' %}"></script>
 
-<script src="{% static 'js/contact.js' %}"></script>
-<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
-<script src="{% static 'js/jquery.form.js' %}"></script>
-<script src="{% static 'js/jquery.validate.min.js' %}"></script>
-<script src="{% static 'js/mail-script.js' %}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
+  const messageBox = document.getElementById('formMessage');
 
-<script src="{% static 'js/main.js' %}"></script>
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+    const response = await fetch(form.action || window.location.href, {
+      method: 'POST',
+      headers: {
+        'X-CSRFToken': csrfToken
+      },
+      body: formData
+    });
+
+    if (response.ok) {
+      messageBox.textContent = "Формата е изпратена успешно!";
+      form.reset();
+    } else {
+      messageBox.textContent = "Възникна грешка при изпращане.";
+      messageBox.style.color = 'red';
+    }
+  });
+});
+</script>
 
 
 </body>
