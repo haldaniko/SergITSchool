@@ -2712,17 +2712,20 @@ h4 {
     }
 }
 
-/* line 9, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_program.scss */
 .popular_program_area .single__program .program_thumb img {
     width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
+
 
 /* line 13, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_program.scss */
 .popular_program_area .single__program .program__content {
     background: #f8fafe;
     padding: 55px 40px 60px 40px;
     position: relative;
-     height: 60%;
+    height: 60%;
+    border-radius: 15px;
 }
 
 /* line 17, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_program.scss */
