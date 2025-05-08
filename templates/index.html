@@ -187,42 +187,23 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-10">
-        <div class="single_event d-flex align-items-center">
-          <div class="date text-center">
-            <span>20-ти</span>
-            <p>Май, 2025</p>
+        {% for event in events %}
+          <div class="single_event d-flex align-items-center">
+            <div class="date text-center">
+              <span>{{ event.datetime.day }}{{ event.datetime|date:"-ти" }}</span>
+              <p>{{ event.datetime|date:"F, Y" }}</p>
+            </div>
+            <div class="event_info">
+              <h4>{{ event.title }}</h4>
+              <p>
+                <span><i class="flaticon-clock"></i> {{ event.datetime|date:"H:i" }} ч.</span>
+                <span><i class="flaticon-calendar"></i> {{ event.datetime|date:"d.m" }}</span>
+                <span><i class="flaticon-placeholder"></i> {{ event.location }}</span>
+              </p>
+            </div>
           </div>
-          <div class="event_info">
-              <h4>Програмиране с помощта на Minecraft</h4>
-            <p><span> <i class="flaticon-clock"></i> 19:00 ч.</span>
-              <span> <i class="flaticon-calendar"></i> 20.05 </span>
-              <span> <i class="flaticon-placeholder"></i> бул. “Сливница” 188</span></p>
-          </div>
-        </div>
-        <div class="single_event d-flex align-items-center">
-          <div class="date text-center">
-            <span>26-ти</span>
-            <p>Май, 2025</p>
-          </div>
-          <div class="event_info">
-              <h4>Дизайн на любим герой от Brawl Stars</h4>
-            <p><span> <i class="flaticon-clock"></i> 19:00 ч.</span>
-              <span> <i class="flaticon-calendar"></i> 26.05 </span>
-              <span> <i class="flaticon-placeholder"></i> бул. “Сливница” 188</span></p>
-          </div>
-        </div>
-        <div class="single_event d-flex align-items-center">
-          <div class="date text-center">
-            <span>28-ти</span>
-            <p>Май, 2025</p>
-          </div>
-          <div class="event_info">
-              <h4>Разработка на игри с Roblox studio</h4>
-            <p><span> <i class="flaticon-clock"></i> 19:00 pm</span>
-              <span> <i class="flaticon-calendar"></i> 28.05</span>
-              <span> <i class="flaticon-placeholder"></i> бул. “Сливница” 188</span></p>
-          </div>
-        </div>
+        {% endfor %}
+
       </div>
     </div>
   </div>
@@ -304,10 +285,10 @@
           </div>
 
 
-{#          <div class="footer_block">#}
-{#            <h4>Последвай ни</h4>#}
-{#            <a href="https://facebook.com/hashtaghub" target="_blank">Facebook</a>#}
-{#          </div>#}
+          {#          <div class="footer_block">#}
+          {#            <h4>Последвай ни</h4>#}
+          {#            <a href="https://facebook.com/hashtaghub" target="_blank">Facebook</a>#}
+          {#          </div>#}
           <p>&copy; 2025 Hashtag Hub. Всички права запазени.</p>
         </div>
 
@@ -423,12 +404,12 @@
 
         <strong>5. Права и задължения на страните</strong>
         <strong>Потребителят се задължава:</strong>
-          - Да спазва приложимото законодателство и настоящите условия;
-          - Да не използва сайта/услугите за незаконни цели;
-          - Да не нарушава правата на трети лица.
+        - Да спазва приложимото законодателство и настоящите условия;
+        - Да не използва сайта/услугите за незаконни цели;
+        - Да не нарушава правата на трети лица.
         <strong>Доставчикът има право:</strong>
-          - Да ограничава или прекратява достъпа до сайта/услугите при нарушаване на условията;
-          - Да прави промени в услугите и съдържанието без предварително уведомление.
+        - Да ограничава или прекратява достъпа до сайта/услугите при нарушаване на условията;
+        - Да прави промени в услугите и съдържанието без предварително уведомление.
 
         <strong>6. Интелектуална собственост</strong>
         Всички права върху съдържанието на сайта (текстове, изображения, софтуер, лого и др.) са собственост на
@@ -436,15 +417,16 @@
 
         <strong>7. Отказ от отговорност</strong>
         Доставчикът не носи отговорност за:
-          - Преки или непреки вреди, причинени от използването или невъзможността за използване на сайта/услугите;
-          - Въздействие от външни атаки или вируси;
-          - Грешки или неточности в информацията.
+        - Преки или непреки вреди, причинени от използването или невъзможността за използване на сайта/услугите;
+        - Въздействие от външни атаки или вируси;
+        - Грешки или неточности в информацията.
 
         <strong>8. Промени в условията</strong>
         Доставчикът си запазва правото да променя настоящите Общи условия по всяко време.
 
         <strong>9. Приложимо право и спорове</strong>
-        Настоящите условия се регулират от българското законодателство. Всички спорове се решават от компетентния съд в Република България.
+        Настоящите условия се регулират от българското законодателство. Всички спорове се решават от компетентния съд в
+        Република България.
 
       </div>
       <div class="modal-footer">

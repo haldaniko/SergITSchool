@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from .forms import ContactForm
+from .models import Event
 
 
 def index(request):
@@ -12,4 +13,5 @@ def index(request):
         return JsonResponse({'success': False, 'errors': form.errors}, status=400)
 
     form = ContactForm()
-    return render(request, "index.html", {'form': form})
+    events = Event.objects.all().order_by('datetime')
+    return render(request, "index.html", {'form': form, 'events': events})
