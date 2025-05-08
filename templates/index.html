@@ -22,8 +22,8 @@
   <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.css' %}">
   <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 </head>
 
 <body>
@@ -304,15 +304,16 @@
           <div class="footer_block">
             <h4>Информация</h4>
             <ul>
-              <li><a href="#">Политика за поверителност</a></li>
-              <li><a href="#">Общи условия</a></li>
+              <li><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Политика за поверителност</a></li>
+              <li><a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Общи условия</a></li>
             </ul>
           </div>
 
-          <div class="footer_block">
-            <h4>Последвай ни</h4>
-            <a href="https://facebook.com/hashtaghub" target="_blank">Facebook</a>
-          </div>
+
+{#          <div class="footer_block">#}
+{#            <h4>Последвай ни</h4>#}
+{#            <a href="https://facebook.com/hashtaghub" target="_blank">Facebook</a>#}
+{#          </div>#}
           <p>&copy; 2025 Hashtag Hub. Всички права запазени.</p>
         </div>
 
@@ -329,6 +330,136 @@
   </div>
 </footer>
 
+<!-- Модальное окно Политика за поверителност-->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="privacyModalLabel">Политика за поверителност</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Затвори"></button>
+      </div>
+      <div class="modal-body" style="white-space: pre-line;">
+        <strong>Политика за поверителност на Хаштаг Иновации</strong>
+        <br>Последна актуализация: 08.05.2025г.
+
+        Настоящата Политика за поверителност описва как Хаштаг Иновации ЕООД събира, използва, съхранява и защитава
+        личните данни на своите потребители, партньори и клиенти съгласно приложимото законодателство, включително Общия
+        регламент за защита на данните (GDPR).
+
+        <strong>1. Данни, които събираме</strong>
+        • Идентификационни данни – име, фамилия, ЕГН (ако е необходимо).
+        • Контактни данни – имейл адрес, телефонен номер, пощенски адрес.
+        • Данни за използване на уебсайта – IP адрес, тип устройство, история на разглеждане и др.
+        • Данни от комуникация – съдържание на съобщения, подадени чрез контактна форма, имейли и други канали.
+
+        <strong>2. Цели на обработката</strong>
+        • Предоставяне на услуги и продукти;
+        • Отговаряне на запитвания и комуникация с клиенти;
+        • Подобряване на качеството на услугите ни;
+        • Изпращане на информационни бюлетини (само при дадено съгласие);
+        • Спазване на законови изисквания.
+
+        <strong>3. Правно основание за обработка</strong>
+        • Вашето съгласие;
+        • Договорни отношения с Вас;
+        • Законодателни задължения;
+        • Наш легитимен интерес (напр. за подобрение на услуги).
+
+        <strong>4. Съхранение на данни</strong>
+        Съхраняваме личните Ви данни само за необходимия срок, в зависимост от целта на обработката и според
+        изискванията на закона. Данните се съхраняват сигурно и поверително.
+
+        <strong>5. Споделяне с трети страни</strong>
+        Не споделяме Вашите лични данни с трети страни, освен когато:
+        • имаме Вашето изрично съгласие;
+        • е необходимо за изпълнение на услуга (напр. доставчици);
+        • сме длъжни по закон да го направим.
+
+        <strong>6. Вашите права</strong>
+        • Право на достъп;
+        • Право на коригиране;
+        • Право на изтриване („право да бъдеш забравен“);
+        • Право на ограничаване на обработката;
+        • Право на преносимост на данните;
+        • Право на възражение;
+        • Право на подаване на жалба до Комисията за защита на личните данни.
+
+        <strong>7. Контакти</strong>
+        Ако имате въпроси относно настоящата политика или искате да упражните своите права, свържете се с нас:
+        Хаштаг Иновации ЕООД
+        ЕИК: 206297959
+        Адрес: гр. София, р-н Триадица, Алабин, 58
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Модальное окно_end -->
+
+<!-- Модальное окно Общи условия -->
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="privacyModalLabel">Общи условия за ползване</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Затвори"></button>
+      </div>
+      <div class="modal-body" style="white-space: pre-line;">
+        <strong>1. Общи положения</strong>
+        1.1. С използването на уебсайта и/или услугите Потребителят се съгласява с настоящите Общи условия.
+        1.2. Ако Потребителят не е съгласен с условията, той трябва да прекрати използването незабавно.
+
+        <strong>2. Данни за доставчика</strong>
+        Хаштаг Иновации ЕООД
+        ЕИК: 206297959
+        Седалище и адрес на управление: гр. София, р-н Триадица, Алабин, 58
+
+        <strong>3. Предоставяни услуги</strong>
+        3.1. Доставчикът предоставя - Научноизследователска и развойна дейност в областта на техническите науки и
+        ИКТ, разработване, реализация и управление на интернет базирани платформи за мачмейкинг и запознанства.
+        3.2. Условията за конкретна услуга могат да бъдат допълнително уточнени в индивидуален договор или
+        оферта.
+
+        <strong>4. Регистрация и профили</strong>
+        4.1. За достъп до някои функционалности може да се изисква регистрация.
+        4.2. Потребителят се задължава да предоставя вярна и пълна информация при регистрацията и да я актуализира
+        при промени.
+
+        <strong>5. Права и задължения на страните</strong>
+        <strong>Потребителят се задължава:</strong>
+          - Да спазва приложимото законодателство и настоящите условия;
+          - Да не използва сайта/услугите за незаконни цели;
+          - Да не нарушава правата на трети лица.
+        <strong>Доставчикът има право:</strong>
+          - Да ограничава или прекратява достъпа до сайта/услугите при нарушаване на условията;
+          - Да прави промени в услугите и съдържанието без предварително уведомление.
+
+        <strong>6. Интелектуална собственост</strong>
+        Всички права върху съдържанието на сайта (текстове, изображения, софтуер, лого и др.) са собственост на
+        Хаштаг Иновации ЕООД или неговите партньори и са защитени от закона.
+
+        <strong>7. Отказ от отговорност</strong>
+        Доставчикът не носи отговорност за:
+          - Преки или непреки вреди, причинени от използването или невъзможността за използване на сайта/услугите;
+          - Въздействие от външни атаки или вируси;
+          - Грешки или неточности в информацията.
+
+        <strong>8. Промени в условията</strong>
+        Доставчикът си запазва правото да променя настоящите Общи условия по всяко време.
+
+        <strong>9. Приложимо право и спорове</strong>
+        Настоящите условия се регулират от българското законодателство. Всички спорове се решават от компетентния съд в Република България.
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Модальное окно_end-->
 
 <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
 <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
@@ -348,34 +479,36 @@
 <script src="{% static 'js/plugins.js' %}"></script>
 <script src="{% static 'js/gijgo.min.js' %}"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  const messageBox = document.getElementById('formMessage');
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contactForm');
+        const messageBox = document.getElementById('formMessage');
 
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
 
-    const formData = new FormData(form);
-    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            const formData = new FormData(form);
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
-    const response = await fetch(form.action || window.location.href, {
-      method: 'POST',
-      headers: {
-        'X-CSRFToken': csrfToken
-      },
-      body: formData
+            const response = await fetch(form.action || window.location.href, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken
+                },
+                body: formData
+            });
+
+            if (response.ok) {
+                messageBox.textContent = "Формата е изпратена успешно!";
+                form.reset();
+            } else {
+                messageBox.textContent = "Възникна грешка при изпращане.";
+                messageBox.style.color = 'red';
+            }
+        });
     });
-
-    if (response.ok) {
-      messageBox.textContent = "Формата е изпратена успешно!";
-      form.reset();
-    } else {
-      messageBox.textContent = "Възникна грешка при изпращане.";
-      messageBox.style.color = 'red';
-    }
-  });
-});
 </script>
 
 
