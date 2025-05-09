@@ -3664,8 +3664,8 @@ h4 {
 
 input::placeholder,
 textarea::placeholder {
-  color: #888; /* Твой цвет */
-  opacity: 1;  /* Делает текст менее прозрачным, по умолчанию он полупрозрачный */
+    color: #888; /* Твой цвет */
+    opacity: 1; /* Делает текст менее прозрачным, по умолчанию он полупрозрачный */
 }
 
 /* line 209, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_course.scss */
@@ -6833,147 +6833,179 @@ h6 {
 /*# sourceMappingURL=style.css.map */
 
 footer {
-  font-family: Arial, sans-serif;
-  padding: 20px 0 10px;
-  font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding: 20px 0 10px;
+    font-size: 14px;
 }
 
 .footer_container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .footer_block {
-  flex: 1;
-  min-width: 180px;
+    flex: 1;
+    min-width: 180px;
 }
 
 .footer_block h4 {
-  margin-bottom: 8px;
-  font-size: 16px;
-  color: #7d84ab;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #7d84ab;
 }
 
 .footer_block p, .footer_block li {
-  font-size: 14px;
-  margin: 4px 0;
-  line-height: 1.4;
+    font-size: 14px;
+    margin: 4px 0;
+    line-height: 1.4;
 }
 
 .footer_block a {
-  color: #00bcd4;
-  text-decoration: none;
+    color: #00bcd4;
+    text-decoration: none;
 }
 
 .footer_block a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .footer_block ul {
-  padding: 0;
-  list-style: none;
-  margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 0;
 }
 
 .social-icon {
-  width: 22px;
-  height: 22px;
-  filter: brightness(0) invert(1);
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
 }
 
 .footer_bottom {
-  text-align: center;
-  margin-top: 10px;
-  border-top: 1px solid #444;
-  padding-top: 10px;
-  font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 12px;
 }
 
 .footer_bottom p {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .contact-map-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .contact-info {
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
 }
 
 .map-frame {
-  flex: 1;
-  min-width: 300px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .col-lg-4, .col-md-6 {
-  display: flex;
+    display: flex;
 }
 
 .single__program {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .single__program {
-  height: 100%;
-  min-height: 500px; /* или нужное значение */
-  display: flex;
-  flex-direction: column;
+    height: 100%;
+    min-height: 500px; /* или нужное значение */
+    display: flex;
+    flex-direction: column;
 }
 
 ---
-
 .service_area {
-  padding: 50px 0;
-  background-color: #f6f8fc;
+    padding: 50px 0;
+    background-color: #f6f8fc;
 }
 
 .service_area .single_service {
-  background-color: #eab832; /* жёлтый по умолчанию */
-  border-radius: 12px;
-  text-align: center;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px 0;
-  transition: background-color 0.3s ease;
-  flex: 1;
-  min-height: 120px;
+    background-color: #eab832; /* жёлтый по умолчанию */
+    border-radius: 12px;
+    text-align: center;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    min-height: 120px;
 }
 
 .service_area .single_service:nth-child(2) {
-  background-color: #8a5ee0; /* фиолетовый */
+    background-color: #8a5ee0; /* фиолетовый */
 }
 
 .service_area .service_info p {
-  color: white;
-  font-size: 18px;
-  margin: 0;
-  padding: 0 10px;
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0 10px;
 }
 
 .service_area .row.justify-content-center > div {
-  display: flex;
+    display: flex;
 }
+
+.slider_image {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 400px;
+}
+
+@media (max-width: 767px) {
+    .slider_image {
+        min-height: 200px;
+        border-radius: 0;
+    }
+
+    .slider_text {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .logo {
+        top: 10px !important;
+        left: 10px !important;
+        height: 40px !important;
+    }
+}
+
+.single_slider {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-repeat: no-repeat;
+}
+
+
 

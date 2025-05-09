@@ -29,18 +29,18 @@
 <body>
 
 <!-- Старт-->
-<div class="slider_area position-relative">
-  <div class="logo position-absolute" style="top: 30px; left: 40px; z-index: 10;">
-    <a href="#">
-      <img src="{% static 'img/logo.png' %}" alt="Логотип" style="height: 50px;">
-    </a>
-  </div>
-
-  <div>
-    <div class="single_slider d-flex align-items-center" style="background-color: white;">
+<div class="start-area">
+  <div class="container">
+    <div class="logo position-relative" style="top: 30px; left: 40px; z-index: 10;">
+      <a href="#">
+        <img src="{% static 'img/logo.png' %}" alt="Логотип" style="height: 50px;">
+      </a>
+    </div>
+    <div class="single_slider d-flex align-items-center position-relative"
+         style="background-color: white;">
       <div class="container-fluid">
         <div class="row w-100">
-          <div class="col-md-6 d-flex align-items-center justify-content-center">
+          <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
             <div class="slider_text px-4">
               <h3><br></h3>
               <p>Твоето място за технологии, творчество и забавление!
@@ -51,11 +51,8 @@
               <a href="#" class="boxed-btn3 mt-3">Вижте повече</a>
             </div>
           </div>
-
-          <div class="col-md-6 slider_image"
-               style="background-image: url('{% static "img/slide.jpg" %}');
-                   background-size: cover;
-                   background-position: center;
+          <div class="col-12 col-md-6 slider_image"
+               style="background-image: url('{% static "img/slide.jpg" %}');z
                    border-radius: 8px;">
           </div>
         </div>
