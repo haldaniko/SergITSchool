@@ -7005,12 +7005,13 @@ footer {
     background-position: center;
     border-radius: 8px;
     min-height: 400px;
-    margin-left: 10px;
+    padding-right: 200px;
 }
 
 @media (max-width: 767px) {
     .slider_image {
         min-height: 200px;
+        margin-left: 13px;
         border-radius: 0;
     }
 
