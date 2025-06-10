@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'haldaniko.com.ua', '185.235.218.158', 'vps3y0zf.netxi.host']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'hashtaghub.bg', '185.235.218.158', 'vps3y0zf.netxi.host']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
