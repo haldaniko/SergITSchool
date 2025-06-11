@@ -13,5 +13,5 @@ def index(request):
         return JsonResponse({'success': False, 'errors': form.errors}, status=400)
 
     form = ContactForm()
-    events = Event.objects.all().order_by('datetime')
+    events = Event.objects.all().order_by('start_date')
     return render(request, "index.html", {'form': form, 'events': events})

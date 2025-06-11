@@ -12,5 +12,13 @@ class ContactMessageAdmin(admin.ModelAdmin):
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'datetime', 'location')
+    list_display = (
+        'title',
+        'description',
+        'start_date',
+        'end_date',
+        'start_time',
+        'end_time',
+        'location'
+    )
     search_fields = ('title', 'datetime')

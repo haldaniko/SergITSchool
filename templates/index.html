@@ -185,14 +185,17 @@
         {% for event in events %}
           <div class="single_event d-flex align-items-center">
             <div class="date text-center">
-              <span>{{ event.datetime.day }}{{ event.datetime|date:"-ти" }}</span>
-              <p>{{ event.datetime|date:"F, Y" }}</p>
+              <span>{{ event.start_date|date:"d.m" }} - {{ event.end_date|date:"d.m" }}</span>
             </div>
             <div class="event_info">
               <h4>{{ event.title }}</h4>
+              {% if event.description %}
+                <p class="event_description">{{ event.description }}</p>
+              {% endif %}
               <p>
-                <span><i class="flaticon-clock"></i> {{ event.datetime|date:"H:i" }} ч.</span>
-                <span><i class="flaticon-calendar"></i> {{ event.datetime|date:"d.m" }}</span>
+                <span><i class="flaticon-clock"></i> {{ event.start_time|time:"H:i" }} - {{ event.end_time|time:"H:i" }} ч.</span>
+                <span><i
+                    class="flaticon-calendar"></i> {{ event.start_date|date:"d.m" }} - {{ event.end_date|date:"d.m" }}</span>
                 <span><i class="flaticon-placeholder"></i> {{ event.location }}</span>
               </p>
             </div>
