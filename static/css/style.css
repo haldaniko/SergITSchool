@@ -3088,7 +3088,7 @@ h4 {
 /* line 16, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_event.scss */
 .recent_event_area .single_event .date span {
     font-size: 40px;
-    font-family: "Abril Fatface", cursive;
+    font-family: "Inter";
     color: #fff;
     line-height: 1;
     margin-bottom: 7px;
@@ -3126,7 +3126,7 @@ h4 {
 /* line 40, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_event.scss */
 .recent_event_area .single_event .event_info h4 {
     font-size: 30px;
-    font-family: "Inter", cursive;
+    font-family: "Inter";
     color: #234262;
     margin-bottom: 15px;
 }
